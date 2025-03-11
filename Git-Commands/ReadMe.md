@@ -5,6 +5,8 @@ Git Stash - https://chiragcodes.github.io/Tech-Git/Git-Commands/A%20guide%20to%2
 
 Git Aliases - https://chiragcodes.github.io/Tech-Git/Git-Commands/Git%20Aliases.html
 
-Git Purge/Delete - https://chiragcodes.github.io/Tech-Git/Git-Commands/Purge-Delete-Git%20Cmd.html
+Git Purge - https://chiragcodes.github.io/Tech-Git/Git-Commands/Git%Purge
+
+Git Delete - https://chiragcodes.github.io/Tech-Git/Git-Commands/Git%Delete
 
 
