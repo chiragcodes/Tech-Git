@@ -1,0 +1,109 @@
+
+
+Stashing changes
+
+
+-> Git's stashing feature allows you to save your local changes temporarily and switch to another branch.
+
+
+# Usage: git stash push [-u] [<message>]
+
+git stash push
+# Creates a new stash
+
+git stash push -u
+# Creates a new stash, including untracked files
+
+git stash push "Bugfix WIP"
+# Creates a new stash with the message "Bugfix WIP"
+
+
+Note:
+You can omit the push sub-command when using git stash.
+Additionally, you might have seen git stash save being used in older versions of Git. This command is now deprecated in favor of git stash push.
+
+
+
+Listing stashes
+
+
+-> Stashes are stored as a stack, with the most recent stash at the top. You can view a list of all stashes using the git stash list command.
+
+
+# Usage: git stash list
+
+git stash list
+# stash@{0}: WIP on patch-1: ee52eda Fix network bug
+# stash@{1}: WIP on master: 2b1e8a7 Add new feature
+
+
+
+Viewing stash changes
+
+
+-> This command displays the changes introduced by the stash relative to the parent commit. You can provide the stash reference to view a specific stash, or omit it to view the latest stash.
+
+
+# Usage: git stash show [<stash>]
+
+git stash show
+# Displays the changes in the latest stash
+
+git stash show stash@{1}
+# Displays the changes in the stash with the reference stash@{1}
+
+
+
+Applying a stash
+
+
+-> This command applies the changes from the specified stash to the working directory. You can provide the stash reference to apply a specific stash, or omit it to apply the latest stash.
+
+
+# Usage: git stash apply [<stash>]
+
+git stash apply
+# Applies the latest stash
+
+git stash apply stash@{1}
+# Applies the stash with the reference stash@{1}
+
+
+Similarly, you can use the git stash pop command to apply the changes from the specified stash and remove it from the stash list.
+
+# Usage: git stash pop [<stash>]
+
+git stash pop
+# Applies the latest stash and removes it from the stash list
+
+git stash pop stash@{1}
+# Applies the stash with the reference stash@{1} and
+#  removes it from the stash list
+
+
+
+Deleting stashes
+
+
+-> This command removes the specified stash from the stash list.
+
+# Usage: git stash drop <stash>
+
+git stash drop
+# Deletes the latest stash
+
+git stash drop stash@{1}
+# Deletes the stash with the reference stash@{1}
+
+
+Moreover, you can delete all stashes using the git stash clear command.
+
+# Usage: git stash clear
+
+git stash clear
+# Deletes all stashes
+
+
+
+
+
